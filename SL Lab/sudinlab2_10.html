@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+  <head>
+    <title>Sudin</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .counter-container {
+        background-color: #708090;
+        border: 2px solid #000;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+      }
+
+      .counter-display {
+        font-size: 100px;
+        margin-bottom: 20px;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      button {
+        font-size: 30px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        background-color: #d3d3d3;
+        border-radius: 4px;
+      }
+
+      button:hover {
+        background-color: #a9a9a9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="counter-container">
+      <div id="counter" class="counter-display">1</div>
+      <div class="button-container">
+        <button id="increment">+</button>
+        <button id="decrement">-</button>
+      </div>
+    </div>
+
+    <script>
+      let counterValue = 1;
+      const counterDisplay = document.getElementById("counter");
+      const incrementButton = document.getElementById("increment");
+      const decrementButton = document.getElementById("decrement");
+
+      incrementButton.addEventListener("click", () => {
+        counterValue++;
+        counterDisplay.textContent = counterValue;
+      });
+
+      decrementButton.addEventListener("click", () => {
+        if (counterValue > 0) {
+          counterValue--;
+          counterDisplay.textContent = counterValue;
+        }
+      });
+    </script>
+  </body>
+</html>

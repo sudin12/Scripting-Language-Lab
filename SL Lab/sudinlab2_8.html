@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <title>Sudin</title>
+</head>
+<body>
+    <script>
+        const newDiv = document.createElement('div');
+        
+        newDiv.setAttribute('id', 'mydiv');
+
+        document.body.appendChild(newDiv);
+
+        const myDiv = document.getElementById('mydiv');
+
+        const newParagraph = document.createElement('p');
+
+        newParagraph.textContent = 'This is a dynamically added paragraph inside the div.';
+
+        myDiv.appendChild(newParagraph);
+
+        myDiv.style.fontFamily = 'Arial, sans-serif';
+        myDiv.style.fontSize = '16px';
+        myDiv.style.color = 'blue'; 
+        myDiv.style.backgroundColor = 'lightyellow'; 
+        myDiv.style.border = '2px solid black'; 
+        myDiv.style.padding = '10px'; 
+        myDiv.style.margin = '20px'; 
+        myDiv.style.width = '300px'; 
+        myDiv.style.textAlign = 'center'; 
+    </script>
+</body>
+</html>

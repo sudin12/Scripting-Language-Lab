@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudin</title>
+</head>
+<body>
+<script>
+    function calculateCuboidProperties(length, width, height) {
+        var area = length * width;
+        var surfaceArea = 2 * (length * width + width * height + height * length);
+        var volume = length * width * height;
+
+        console.log("Area of the base is: " + area);
+        console.log("Surface area of the cuboid is: " + surfaceArea);
+        console.log("Volume of the cuboid is: " + volume);
+    }
+
+    var length = parseFloat(prompt("Enter the length of the cuboid:"));
+    var width = parseFloat(prompt("Enter the width of the cuboid:"));
+    var height = parseFloat(prompt("Enter the height of the cuboid:"));
+
+    calculateCuboidProperties(length, width, height);
+</script>
+</body>
+</html>

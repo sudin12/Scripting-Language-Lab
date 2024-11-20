@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudin</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        const items = ["Item 1", "Item 2", "Item 3"];
+        $.each(items, function (index, value) {
+          $("#itemList").append("<li>" + value + "</li>");
+        });
+        $.fn.tooltip = function () {
+          this.hover(
+            function () {
+              $(this).append('<div class="tooltip">Tooltip text</div>');
+            },
+            function () {
+              $(this).find(".tooltip").remove();
+            }
+          );
+          return this;
+        };
+        $(".has-tooltip").tooltip();
+      });
+    </script>
+    <style>
+      .tooltip {
+        display: inline-block;
+        background-color: #333;
+        color: #fff;
+        padding: 5px;
+        position: absolute;
+        z-index: 1000;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="itemList"></ul>
+    <p class="has-tooltip">Hover over me to see the tooltip.</p>
+  </body>
+</html>

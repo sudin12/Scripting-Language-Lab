@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title>Sudin</title>
+</head>
+<body>
+<script>
+    var a = [2, 19, 37, 48, 45, 94, 12, 23, 78];
+
+    var smallest = a[0];
+    var largest = a[0];
+    
+    for (var i = 1; i < a.length; i++) {
+        if (a[i] < smallest) {
+            smallest = a[i];
+        }
+        if (a[i] > largest) {
+            largest = a[i];
+        }
+    }
+    console.log("Smallest number is: " + smallest);
+    console.log("Largest number is: " + largest);
+</script>
+</body>
+</html>

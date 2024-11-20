@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudin</title>
+  </head>
+  <body>
+    <script>
+      const newDiv = document.createElement("div");
+
+      newDiv.setAttribute("id", "mydiv");
+
+      newDiv.textContent = "This is a div that will be removed.";
+
+      document.body.appendChild(newDiv);
+
+      const myDiv = document.getElementById("mydiv");
+
+      myDiv.remove();
+    </script>
+  </body>
+</html>
